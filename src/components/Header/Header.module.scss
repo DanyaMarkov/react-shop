@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgb(81, 81, 235);
+    color: white;
+
+    &__logo {
+        padding: 10px;
+    }
+
+    &__menu {
+        a {
+            padding: 20px;
+            color: white;
+            font-size: 22px;
+        }
+        a:hover {
+            background-color: blue;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 70px;
+        i {
+            font-size: 48px;
+            padding: 30px;
+        }
+        &_el {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.product {
+    background-color: rgb(184, 228, 228);
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid black;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column;
+
+    img {
+        max-width: 100%;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        min-height: 7vh;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &__buy {
+        margin-bottom: 0px;
+        padding-bottom: 20px;
+
+        display: flex;
+        justify-content: space-around;
+        flex-grow: 1;
+    }
+}

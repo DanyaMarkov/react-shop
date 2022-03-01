@@ -1,0 +1,26 @@
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: black;
+  color: #ffffff;
+}
+
+.footer__logo {
+  padding: 10px;
+}
+
+.footer__menu {
+  padding: 10px;
+}
+
+.footer__basket {
+  padding: 10px;
+}
+/*# sourceMappingURL=Footer.module.css.map */

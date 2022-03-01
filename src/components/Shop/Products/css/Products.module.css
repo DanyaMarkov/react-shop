@@ -1,0 +1,10 @@
+.products {
+  background-color: bisque;
+  max-width: 70vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(270px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1rem;
+}
+/*# sourceMappingURL=Products.module.css.map */
