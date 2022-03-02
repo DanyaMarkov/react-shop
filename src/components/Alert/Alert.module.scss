@@ -1,0 +1,35 @@
+.alertContainer {
+    position: fixed;
+    right: 0% !important;
+    top: 20%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgb(47, 25, 125);
+    color: white;
+
+    width: 20rem;
+    max-width: 95%;
+
+    border: rgb(211, 201, 228) 2px solid;
+    border-radius: 20px;
+
+    -webkit-box-shadow: 7px 5px 15px -4px rgba(34, 60, 80, 0.58);
+    -moz-box-shadow: 7px 5px 15px -4px rgba(34, 60, 80, 0.58);
+    box-shadow: 7px 5px 15px -4px rgba(34, 60, 80, 0.58);
+
+    &__el {
+        padding: 20px 10px;
+    }
+    animation: showAlert 0.3s;
+}
+
+@keyframes showAlert {
+    from {
+        opacity: 0;
+        top: 10%;
+    }
+    to {
+        opacity: 1;
+        top: 20%;
+    }
+}

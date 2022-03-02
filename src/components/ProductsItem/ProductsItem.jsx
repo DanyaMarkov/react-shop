@@ -1,13 +1,13 @@
 import css from './css/ProductsItem.module.css'
 
 import { useContext } from "react";
-import { CustomContext } from '../../../../Context/Context';
+import { ShopContext } from '../../ContextReducer/Context';
 
 
 const ShopItem = ({ product }) => {
 
 
-    const { addToBasket } = useContext(CustomContext)
+    const { addToBasket } = useContext(ShopContext)
 
 
     return (
@@ -25,10 +25,11 @@ const ShopItem = ({ product }) => {
                         {
                             id: product.id,
                             name: product.name,
-                            price: product.price
+                            //сделал цену +50, чтобы не было 0
+                            price: product.price + 50
                         }
                     )}>В корзину</button>
-                <span>  {product.price + 200} рублей</span>
+                <span>  {product.price + 50} рублей</span>
             </div>
         </div>
     );

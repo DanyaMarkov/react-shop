@@ -1,0 +1,93 @@
+.basket {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #d6d6d6;
+  width: 50rem;
+  max-width: 95%;
+  border: #d3c9e4 2px solid;
+  border-radius: 20px;
+  -webkit-box-shadow: 15px 12px 16px 5px rgba(34, 60, 80, 0.5);
+  box-shadow: 15px 12px 16px 5px rgba(34, 60, 80, 0.5);
+  -webkit-animation: show 0.5s ease-out;
+          animation: show 0.5s ease-out;
+}
+
+.basket__title {
+  background-color: #351453;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 20px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.basket__title i {
+  font-size: 28px;
+}
+
+.basket__title i:hover {
+  cursor: pointer;
+}
+
+.basket__items {
+  font-size: 28px;
+  padding: 5px 20px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.basket__totalPrice {
+  background-color: #351453;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px 20px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+    top: 20%;
+    left: 80%;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    top: 20%;
+    left: 80%;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+  }
+}
+/*# sourceMappingURL=BasketList.module.css.map */

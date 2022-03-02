@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from 'react';
-import { CustomContext } from '../../../Context/Context';
-import { Preloader } from '../../../Utilities/Preloader';
+import { ShopContext } from '../../ContextReducer/Context';
+import { Preloader } from '../../Utilities/Preloader';
 import css from './css/Products.module.css'
-import ProductsItem from './ProductsItem/ProductsItem';
+import ProductsItem from '../ProductsItem/ProductsItem';
 
 
 const Shop = () => {
 
-    const { products = [], getProductsList } = useContext(CustomContext)
+    const { products = [], getProductsList } = useContext(ShopContext)
 
     useEffect(() => {
         getProductsList("ru");
@@ -21,7 +21,7 @@ const Shop = () => {
                 products.length
                     ? products.map(product => {
                         return (
-                            <ProductsItem product={product} />
+                            <ProductsItem key={product.id} product={product} />
                         )
                     })
                     : <Preloader />

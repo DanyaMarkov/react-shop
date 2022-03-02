@@ -1,0 +1,44 @@
+.alertContainer {
+  position: fixed;
+  right: 0% !important;
+  top: 20%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #2f197d;
+  color: white;
+  width: 20rem;
+  max-width: 95%;
+  border: #d3c9e4 2px solid;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 5px 15px -4px rgba(34, 60, 80, 0.58);
+  box-shadow: 7px 5px 15px -4px rgba(34, 60, 80, 0.58);
+  -webkit-animation: showAlert 0.3s;
+          animation: showAlert 0.3s;
+}
+
+.alertContainer__el {
+  padding: 20px 10px;
+}
+
+@-webkit-keyframes showAlert {
+  from {
+    opacity: 0;
+    top: 10%;
+  }
+  to {
+    opacity: 1;
+    top: 20%;
+  }
+}
+
+@keyframes showAlert {
+  from {
+    opacity: 0;
+    top: 10%;
+  }
+  to {
+    opacity: 1;
+    top: 20%;
+  }
+}
+/*# sourceMappingURL=Alert.module.css.map */
