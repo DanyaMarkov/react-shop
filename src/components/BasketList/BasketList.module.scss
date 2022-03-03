@@ -1,4 +1,5 @@
 .basket {
+    max-height: 70%;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -35,11 +36,10 @@
         }
     }
     &__items {
-        font-size: 28px;
+        max-height: 50%;
+        overflow: auto;
 
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: space-between;
+        font-size: 28px;
         padding: 5px 20px;
         border-radius: 0px 0px 20px 20px;
     }
@@ -47,12 +47,17 @@
     &__totalPrice {
         background-color: rgb(53, 20, 83);
         color: white;
-
+        font-size: 20px;
         display: flex;
+        align-items: center;
         justify-content: space-around;
         flex-direction: row;
         padding: 5px 20px;
         border-radius: 0px 0px 20px 20px;
+
+        button {
+            padding: 10px 20px;
+        }
     }
     animation: show 0.5s ease-out;
 }

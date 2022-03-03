@@ -2,20 +2,35 @@
 import css from './Footer.module.css'
 
 const Footer = () => {
-    return (<footer className={css.footer}>
-        <div className={css.footer__logo}>
-            <h3>React Shop</h3>
-        </div>
+    return (
+        <footer className={css.footer}>
+            <div className={css.footer__links}>
+                <div>
+                    <h4>React shop</h4>
+                    <a href="https://github.com/DanyaMarkov">
+                        Github автора
+                    </a>
+                </div>
+                <div>
+                    <h5>В данном проекте отточены следующие навыки и технологии:</h5>
+                    <ul>
+                        <li>Управление стейтом благодаря хукам useContext и useReducer</li>
+                        <li>Использование CSS модулей</li>
+                        <li>Использование библиотеки Axios для взаимодействия с API</li>
+                        <li>Работа с анимациями и всплывающими окнами</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div className={css.footer__menu}>
-            <h3>React Shop</h3>
-        </div>
+            <div className={css.footer__copyright}>
+                <div>
+                    © {new Date().getFullYear()} Copyright Text
 
-        <div className={css.footer__basket}>
-            <h3>React Shop</h3>
-        </div>
+                </div>
+            </div>
 
-    </footer>);
+        </footer>
+    );
 }
 
 export default Footer;

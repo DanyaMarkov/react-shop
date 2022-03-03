@@ -12,6 +12,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #1a5857;
   min-height: calc(100vh - 115px - 115px);
   padding: 1.5rem 0;
 }

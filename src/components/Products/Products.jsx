@@ -4,6 +4,7 @@ import { ShopContext } from '../../ContextReducer/Context';
 import { Preloader } from '../../Utilities/Preloader';
 import css from './css/Products.module.css'
 import ProductsItem from '../ProductsItem/ProductsItem';
+import { shopAPI } from '../../api/api';
 
 
 const Shop = () => {
@@ -11,7 +12,11 @@ const Shop = () => {
     const { products = [], getProductsList } = useContext(ShopContext)
 
     useEffect(() => {
-        getProductsList("ru");
+        getProducts();
+        async function getProducts() {
+            let data = await shopAPI.getProducts("ru");
+            return getProductsList(data, "ru");
+        }
     }, []);
 
     return (

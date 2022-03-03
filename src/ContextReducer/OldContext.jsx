@@ -1,38 +1,10 @@
-import { createContext, useReducer, useState } from "react";
-import { reducer } from "./reducer";
-
+import { createContext, useState } from "react";
 
 import { shopAPI } from "../api/api";
 
 export const ShopContext = createContext();
 
-const initialState = {
-    products: [],
-    productsLoading: true,
-    order: [],
-    isBasketShow: false,
-    alertName: "",
-    language: "ru"
-}
-
 export const ContextProvider = (props) => {
-
-    const [state, dispatch] = useReducer(reducer, initialState)
-
-    state.closeAlert = () => {
-        dispatch({ type: "CLOSE_ALERT" })
-    }
-
-    state.removeFromBasket = (itemID) => {
-        dispatch({ type: "REMOVE_FROM_BASKET", payload: { id: itemID } })
-        // setOrder(order.filter(item => item.id !== itemID));
-    }
-
-    state.getProductsList = async (language) => {
-        dispatch({ type: "GET_PRODUCTS_LIST", payload: { language: language } })
-    }
-
-    /////////////////////////////////////////////fffffffffffffffffffff
 
     const [products, setProducts] = useState([]);
     const [productsLoading, setProductsLoading] = useState(true);
@@ -41,7 +13,7 @@ export const ContextProvider = (props) => {
     const [alertName, setAlertName] = useState("")
     const [language, setLanguage] = useState("ru")
 
-
+    //Получение всех товаров и добавление их в стейт
     async function getProductsList(language) {
         setProductsLoading(true)
         let data = await shopAPI.getProducts(language);
@@ -52,7 +24,6 @@ export const ContextProvider = (props) => {
     //Добавляем товар в корзину по нажатию "В корзину"
     function addToBasket(item) {
         const itemIndex = order.findIndex(ordertItem => ordertItem.id === item.id)
-
         if (itemIndex < 0) {
             const newItem = {
                 ...item,
@@ -75,6 +46,7 @@ export const ContextProvider = (props) => {
         setAlertName(item.name);
     }
 
+    //Удаляем товар из корзины
     function removeFromBasket(itemID) {
         setOrder(order.filter(item => item.id !== itemID));
     }

@@ -26,7 +26,7 @@ const BasketList = () => {
                     <span>Корзина</span>
                 </div>
                 <div onClick={() => handleBasketShow()}>
-                    <i class="large material-icons">close</i>
+                    <i className="large material-icons">close</i>
                 </div>
 
             </div>

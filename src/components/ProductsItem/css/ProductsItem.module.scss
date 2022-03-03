@@ -1,15 +1,35 @@
+.product:hover {
+    // animation: productHover 0.4s;
+    transition: 0.5s;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(241, 243, 245, 0.76);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(211, 217, 221, 0.76);
+    box-shadow: 4px 4px 8px 0px rgba(218, 222, 224, 0.76);
+}
+
+@keyframes productHover {
+    from {
+    }
+    to {
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.76);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.76);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.76);
+    }
+}
+
 .product {
-    background-color: rgb(184, 228, 228);
+    background-color: rgb(241, 230, 216);
     padding: 10px;
     font-size: 18px;
     border: 1px solid black;
-    // display: flex;
-    // align-items: center;
-    // flex-direction: column;
-
+    border-radius: 25px;
     img {
         max-width: 100%;
+        border-radius: 30px;
     }
+    // img:hover {
+    //     width: 10%;
+    //     position: absolute;
+    // }
 
     &__title {
         display: flex;
@@ -26,5 +46,24 @@
         display: flex;
         justify-content: space-around;
         flex-grow: 1;
+    }
+
+    button {
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: rgb(0, 0, 0);
+        background-color: #ffffff;
+    }
+    button:focus {
+        background-color: #000000;
+        color: rgb(221, 236, 10);
+    }
+    button:hover {
+        // transition: 1s;
+        cursor: pointer;
+        color: wheat;
+        background-image: linear-gradient(to right, #3a3d3d 0%, #1a0c07 51%, #9eefe1 100%);
+        background-size: 200% auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 }

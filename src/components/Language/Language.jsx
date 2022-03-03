@@ -1,15 +1,16 @@
 
 import { useContext } from "react";
 import { ShopContext } from "../../ContextReducer/Context";
+import css from './Language.module.css'
 
 const Language = () => {
 
     const { language, handleChangeLanguage } = useContext(ShopContext)
 
     return (
-        <div
+        <div className={css.language}
             onClick={() => { handleChangeLanguage() }}>
-            <i class="large material-icons">language</i>
+            <i className="large material-icons">language</i>
             <span>{language}</span>
         </div>
     );

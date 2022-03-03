@@ -1,0 +1,27 @@
+.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #880e0e;
+  color: white;
+  border-radius: 20%;
+  padding: 5px;
+}
+
+.cart span {
+  font-size: large;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.cart:hover {
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: #570000;
+  color: #b3ff00;
+}
+/*# sourceMappingURL=Cart.module.css.map */

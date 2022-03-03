@@ -22,11 +22,10 @@ const Header = () => {
 
         <div className={css.header__icons}>
             <div className={css.header__icons_el}>
-                <i class="large material-icons">account_circle</i>
+                <i className="large material-icons">account_circle</i>
             </div>
             <div className={css.header__icons_el}>
                 <Cart />
-                {/* <i class="large material-icons">shopping_cart</i> */}
             </div>
             <div className={css.header__icons_el}>
                 <Language />
